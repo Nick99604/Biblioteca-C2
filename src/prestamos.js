@@ -4,6 +4,7 @@
 // de que el aviso al socio se envíe con éxito (ver ADR-002).
 
 const prestamos = [];
+import { enviarAviso } from './avisos.js';
 
 export function prestarLibro(idLibro, socio) {
   const activo = prestamos.find(p => p.idLibro === idLibro && !p.devuelto);
